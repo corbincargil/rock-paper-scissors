@@ -35,9 +35,17 @@ let computerPlay = function() {
 
 };
 
-// singleRound function that will run a single round of RPS
-let singleRound = function(playerSelection, computerSelection) {
-    console.log('Player chooses: '+playerSelection);
+
+
+//single round if player clicks rock button
+let singleRoundRock = function(playerSelection, computerSelection) {
+
+    //Input from computer
+    playerSelection = 'rock';   
+    console.log('Player chooses: '+playerSelection);computerSelection = computerPlay();
+    
+    //Conditional statements for each outcome
+    
     // tie
     if (playerSelection === computerSelection) {
         console.log('This round was a tie!');
@@ -47,27 +55,68 @@ let singleRound = function(playerSelection, computerSelection) {
         console.log('The computer wins this round!');
         computerScore++;
         console.log('The score is... Player: ' + playerScore + ' and Computer: ' + computerScore);
-    } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-        console.log('The computer wins this round!');
-        computerScore++;
-        console.log('The score is... Player: ' + playerScore + ' and Computer: ' + computerScore);
-    } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-        console.log('The computer wins this round!');
-        computerScore++;
-        console.log('The score is... Player: ' + playerScore + ' and Computer: ' + computerScore);
     //player wins
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
         console.log('Player 1 wins this round!');
         playerScore++;
         console.log('The score is... Player: ' + playerScore + ' and Computer: ' + computerScore);
+    } else {
+        console.log('An error occured this round.');
+    }
+};
+
+//single round if player clicks paper button
+let singleRoundPaper = function(playerSelection, computerSelection) {
+
+    //Input from computer
+    playerSelection = 'paper';   
+    console.log('Player chooses: '+playerSelection);computerSelection = computerPlay();
+    
+    //Conditional statements for each outcome
+    
+    // tie
+    if (playerSelection === computerSelection) {
+        console.log('This round was a tie!');
+        console.log('The score is... Player: ' + playerScore + ' and Computer: ' + computerScore);
+    //human loses
+    } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
+        console.log('The computer wins this round!');
+        computerScore++;
+        console.log('The score is... Player: ' + playerScore + ' and Computer: ' + computerScore);
+    //player wins
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
         console.log('Player 1 wins this round!');
         playerScore++;
         console.log('The score is... Player: ' + playerScore + ' and Computer: ' + computerScore);
+    } else {
+        console.log('An error occured this round.');
+    }
+};
+
+//single round if player clicks scissors button
+let singleRoundScissors = function(playerSelection, computerSelection) {
+
+    //Input from computer
+    playerSelection = 'scissors';   
+    console.log('Player chooses: '+playerSelection);computerSelection = computerPlay();
+    
+    //Conditional statements for each outcome
+    
+    // tie
+    if (playerSelection === computerSelection) {
+        console.log('This round was a tie!');
+        console.log('The score is... Player: ' + playerScore + ' and Computer: ' + computerScore);
+    //human loses
+    } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+        console.log('The computer wins this round!');
+        computerScore++;
+        console.log('The score is... Player: ' + playerScore + ' and Computer: ' + computerScore);
+    //player wins
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
         console.log('Player 1 wins this round!');
         playerScore++;
         console.log('The score is... Player: ' + playerScore + ' and Computer: ' + computerScore);
+    //error
     } else {
         console.log('An error occured this round.');
     }
@@ -77,18 +126,22 @@ let singleRound = function(playerSelection, computerSelection) {
 
 
 // game function that runs 5 rounds of RPC
-game = function(playerSelection, computerSelection) {
-    for (let i = 0; i < 5; i++) {
-        console.log('ROUND '+ (i+1));
+// game = function(playerSelection, computerSelection) {
+//     for (let i = 1; i <= 5; i++) {
+//         console.log('ROUND '+ (i));
         
-        let input = prompt("Input rock, paper, or scissors:")
-        input = input.trim();
-        playerSelection = input.toLowerCase();
-        computerSelection = computerPlay();
+//         singleRound(playerSelection,computerSelection);
+        
+//     }
+// };
+// game();
 
-        singleRound(playerSelection,computerSelection);
-        
-    }
-};
-game();
-//console.log(game());
+
+const rockButton = document.querySelector('#rock');
+rockButton.addEventListener('click', singleRoundRock);
+
+const paperButton = document.querySelector('#paper');
+paperButton.addEventListener('click', singleRoundPaper);
+
+const scissorsButton = document.querySelector('#scissors');
+scissorsButton.addEventListener('click', singleRoundScissors);
