@@ -6,12 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors</title>
     <script src="rock-paper-scissors.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!--title-->
+    <h1><strong>Rock, Paper, Scissors Game</strong></h1>
+
+    <h2>Score:</h2>
+    <div id="score">
+        <div id="human-score">
+            <p class="number">1</p>
+            <p class="text">HUMAN</p>
+        </div>
+        <p class="hyphen"><strong>-</strong></p>
+        <div id="computer-score">
+            <p class="number">0</p>
+            <p class="text">COMPUTER</p>
+        </div>
+    </div>
+
     <div class="buttons">
         <button id="rock">Rock</button>
         <button id="paper">Paper</button>
         <button id="scissors">Scissors</button>
     </div>
+
 </body>
 </html>
