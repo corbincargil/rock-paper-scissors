@@ -82,3 +82,17 @@ body{
     background-image: url(../rock-paper-scissors/images/scissors-hand.png);
     background-size: 75px auto;
 }
+
+#reset-button {
+    margin-top: 30px;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: blackgit ;
+}
+
+button:hover {
+    box-shadow: inset 0 0 6px 1px;
+}
