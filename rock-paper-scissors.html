@@ -11,24 +11,34 @@
 <body>
     <!--title-->
     <h1><strong>Rock, Paper, Scissors Game</strong></h1>
-
-    <h2>Score:</h2>
-    <div id="score">
-        <div id="human-score">
-            <p class="number">1</p>
-            <p class="text">HUMAN</p>
-        </div>
-        <p class="hyphen"><strong>-</strong></p>
-        <div id="computer-score">
-            <p class="number">0</p>
-            <p class="text">COMPUTER</p>
+    <div id="outer-scoreboard">
+        <h2>Scoreboard</h2>
+        <div id="scoreboard">
+            <div id="human-score">
+                <p id="human-score-number">0</p>
+                <p class="text">HUMANS</p>
+            </div>
+            <p class="hyphen"><strong>-</strong></p>
+            <div id="computer-score">
+                <p id="computer-score-number">0</p>
+                <p class="text">COMPUTER</p>
+            </div>
         </div>
     </div>
 
+    <div id="results">
+        <h2 id="results-title">Results:</h2>
+        <div id="comp-chose-div">
+            <h3>The computer chose: </h3>
+        </div>
+        <h3 id="round-result"></h3>
+
+    </div>
+
     <div class="buttons">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
+        <button id="rock"></button>
+        <button id="paper"></button>
+        <button id="scissors"></button>
     </div>
 
 </body>
