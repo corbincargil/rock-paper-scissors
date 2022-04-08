@@ -4,6 +4,10 @@
 
 This is a fun litle rock, paper, scissors demo where the user plays against the computer by inputting their choice of RPC. The interface will keep a running score total and notify the user what the computer picks (rock, paper, or scissors) as well as the winner of each round. The goal of this project is to practice developing a project from scratch. 
 
+## Live Preview: 
+
+Use this link to access a live preview of the game: https://corbincargil.github.io/rock-paper-scissors/
+
 ## Approach: 
 
 The first implementation of the game will be played in the console. Inputs will be prompted from the user and letting them type in their choice of rock, paper, or scissors. The primary goal here is to make sure that the game logic funcitons properly and the score counters accurately reflect the scores. 
