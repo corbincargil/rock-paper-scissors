@@ -57,6 +57,12 @@ body{
     align-items: baseline;
 }
 
+#human-chose-div {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+}
+
 .buttons #rock, #paper, #scissors {
     background-color: blueviolet;
 }
@@ -90,7 +96,7 @@ body{
 
 a:visited {
     text-decoration: none;
-    color: blackgit ;
+    color: black ;
 }
 
 button:hover {
