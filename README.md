@@ -21,6 +21,9 @@ After the initial game has been built and can be played in the console, I will g
 * CSS styling for basic user interfaces
 * Git & GitHub for version control 
 
+### `The user interface:`
+![Screen Shot 2022-08-20 at 1 38 59 PM](https://user-images.githubusercontent.com/100732012/185761649-9ff7a6f0-b797-4d4a-8d31-697cceee5f1d.png)
+
 ## Technologies Used:
 
 * HTML, CSS, JavaScript
